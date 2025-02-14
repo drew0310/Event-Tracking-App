@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .profile-page {
+    position: relative;
+    padding: 20px;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #001f3f, #1da0f2);
+    color: white;
+    text-align: center;
+  }
+  
+  .profile-page h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700; 
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-info {
+    margin-bottom: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-info label {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #ffffff;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .profile-info p,
+  .profile-info input {
+    flex: 1;
+    padding: 1px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .profile-info input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .delete-msg {
+    margin-top: 10px;
+    color: #ffd700;
+    font-size: 1rem;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+  }
+  
+  .edit-btn:hover {
+    color: #0056b3;
+    background-color: #ffd700;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .delete-btn {
+    background-color: #007bff;
+  }
+  
+  .delete-btn:hover {
+    color: #ffffff;
+    background-color: #dc2929;
+    transition: all 0.5s ease-in-out;
+  }
+  

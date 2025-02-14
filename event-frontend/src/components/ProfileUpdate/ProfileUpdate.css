@@ -1,0 +1,91 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.fade-out {
+    animation: fadeOut 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-card {
+    background: #e3e3e3;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    position: relative;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.form-card h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00468d;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.label-text {
+    flex: 1;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-card input {
+    flex: 2;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.form-card button {
+    background-color: #fff;
+    color: #00468d;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.form-card button:hover {
+    background-color: #00468d;
+    color: #fff;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: green;
+}

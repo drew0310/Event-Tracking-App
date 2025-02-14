@@ -1,0 +1,118 @@
+.event-card {
+    background: white;
+    color: #001f3f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .countdown {
+    font-weight: bold;
+  }
+  
+  .event-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.9); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .event-popup.popup-show {
+    opacity: 1; 
+    transform: scale(1); 
+    pointer-events: auto;
+  }
+  
+  .event-popup.popup-hide {
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  
+  .popup-content {
+    background: white;
+    color: #001f3f;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .delete-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .delete-button:hover {
+    transform: scale(1.2);
+  }
+
+  .update-button {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .update-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .close-button:hover {
+    transform: scale(1.2);
+    background-color: #cccccc;
+  }
+  
