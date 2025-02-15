@@ -77,7 +77,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
       createdBy: currentUser,
     };
     try {
-        const response = await axios.post("http://localhost:8080/app/events/addEvent", newEvent);
+        const response = await axios.post("https://event-tracking-app-production.up.railway.app/app/events/addEvent", newEvent);
         if(response.status === 201) {
             setMessage("Event created successfully!");
             setTimeout(() => {

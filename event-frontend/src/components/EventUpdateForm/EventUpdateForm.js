@@ -75,7 +75,7 @@ const EventUpdateForm = ({ event, onClose, onSubmit }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8080/app/events/updateEvent`,
+        `https://event-tracking-app-production.up.railway.app/app/events/updateEvent`,
         formData,
         { headers: { "Content-Type": "application/json" } }
       );

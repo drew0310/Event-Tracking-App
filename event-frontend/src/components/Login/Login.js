@@ -49,7 +49,7 @@ const Login = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await axios.post("http://localhost:8080/app/users/login", formData);
+        const response = await axios.post("https://event-tracking-app-production.up.railway.app/app/users/login", formData);
         if (response.status === 200) {
           setSuccessMessage("Login successful! Redirecting to user home page...");
           setTimeout(() => navigate(`/home/${formData.username}`), 3000); 
@@ -73,7 +73,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:8080/app/users/forgot-password/${formData.username}`, {
+      const response = await axios.get(`https://event-tracking-app-production.up.railway.app/app/users/forgot-password/${formData.username}`, {
         username: formData.username,
       });
 

@@ -54,7 +54,7 @@ const Register = () => {
     if (Object.keys(validationErrors).length === 0) {
       try {
         // Call backend API
-        const response = await axios.post("http://localhost:8080/app/users/addUser", formData); 
+        const response = await axios.post("https://event-tracking-app-production.up.railway.app/app/users/addUser", formData); 
         if (response.status === 201) {
           setSuccessMessage("Registration successful! Redirecting back to landing page...");
           setTimeout(() => navigate("/"), 3000); 

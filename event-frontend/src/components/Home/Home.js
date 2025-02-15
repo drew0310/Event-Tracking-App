@@ -17,7 +17,7 @@ const Home = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/app/events/fetchEventsByUser/${username}`,
+          `https://event-tracking-app-production.up.railway.app/app/events/fetchEventsByUser/${username}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const Home = () => {
         const filteredEvents = prevEvents.filter((event) => {
           const eventEnd = new Date(`${event.endDate}T${event.endTime}`);
           if (now > eventEnd) {
-            axios.delete(`http://localhost:8080/app/events/deleteEvent/${event.eventId}`, {
+            axios.delete(`https://event-tracking-app-production.up.railway.app/app/events/deleteEvent/${event.eventId}`, {
               headers: {
                 "Content-Type": "application/json",
               },

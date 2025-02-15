@@ -92,7 +92,7 @@ const EventCard = ({ event, onDelete, onUpdate }) => {
 
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/app/events/deleteEvent/${event.eventId}`, {
+      const response = await axios.delete(`https://event-tracking-app-production.up.railway.app/app/events/deleteEvent/${event.eventId}`, {
         headers: {
           "Content-Type": "application/json",
         },

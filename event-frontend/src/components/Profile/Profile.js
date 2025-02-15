@@ -20,7 +20,7 @@ const Profile = () => {
     const fetchUserProfile = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/app/users/fetchUserByUsername/${username}`,
+          `https://event-tracking-app-production.up.railway.app/app/users/fetchUserByUsername/${username}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const Profile = () => {
 
   const handleDeleteProfile = async () => {
     try {
-      const response = await axios.delete(`http://localhost:8080/app/users/deleteUser/${username}`, {
+      const response = await axios.delete(`https://event-tracking-app-production.up.railway.app/app/users/deleteUser/${username}`, {
         headers: {
           "Content-Type": "application/json",
         },
