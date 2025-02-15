@@ -4,7 +4,7 @@ A full-stack web application for **event and task creation and tracking**, built
 
 ---
 
-## 🚀 Features  
+## Features  
 
 ✅ **Event Creation & Management** – Users can create events with a name, date, time, and description.  
 ✅ **User Authentication** – Simple login using username and password.  
@@ -22,10 +22,14 @@ A full-stack web application for **event and task creation and tracking**, built
 - **React** (with functional components & hooks)  
 - **React Router** (for navigation)  
 - **Axios** (for API requests)  
-- **CSS (custom styling & animations)**  
+- **CSS** (custom styling & animations)
 
 ### Backend (event-backend 🛢️)  
 - **Spring Boot** (REST API development)  
 - **MongoDB Atlas** (cloud database)  
 - **Spring Data MongoDB** (database interaction)  
-- **Maven** (dependency management)   
+- **Maven** (dependency management)
+
+### Deployment 🚀  
+- **Front-end** - Netlify
+- **Back-end** - Railway
