@@ -107,6 +107,11 @@ textarea {
     font-size: 1rem;
 }
 
+.error-message {
+    color: #f41616;
+    font-size: 1rem;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

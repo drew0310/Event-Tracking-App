@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "../EventCard/EventCard";
 import "./Home.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import EventCreationForm from "../EventCreationForm/EventCreationForm";
 import "../EventCreationForm/EventCreationForm.css";
@@ -10,7 +10,6 @@ import Navbar from "../Navbar/Navbar";
 const Home = () => {
   const [events, setEvents] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
   const { username } = useParams();
 
   useEffect(() => {

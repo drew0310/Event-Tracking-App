@@ -108,6 +108,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+      {errors.title && <div className="error-message">{errors.title}</div>}
     </div>
     <div className="form-field">
       <label className="label-text">Description</label>
@@ -117,6 +118,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
+      {errors.description && <div className="error-message">{errors.description}</div>}
     </div>
     <div className="form-field">
       <label className="label-text">Start Date</label>
@@ -125,6 +127,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
         value={startDate}
         onChange={(e) => setStartDate(e.target.value)}
       />
+      {errors.startDate && <div className="error-message">{errors.startDate}</div>}
     </div>
     <div className="form-field">
       <label className="label-text">Start Time</label>
@@ -139,6 +142,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
           </option>
         ))}
       </select>
+      {errors.startTime && <div className="error-message">{errors.startTime}</div>}
     </div>
     <div className="form-field">
       <label className="label-text">End Date</label>
@@ -147,6 +151,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
       />
+      {errors.endDate && <div className="error-message">{errors.endDate}</div>}
     </div>
     <div className="form-field">
       <label className="label-text">End Time</label>
@@ -161,6 +166,7 @@ const EventCreationForm = ({ onClose, onSubmit, currentUser }) => {
           </option>
         ))}
       </select>
+      {errors.endTime && <div className="error-message">{errors.endTime}</div>}
     </div>
     <div className="form-buttons">
       <button type="submit">Create</button>
