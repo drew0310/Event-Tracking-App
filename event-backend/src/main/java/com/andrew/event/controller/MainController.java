@@ -16,6 +16,7 @@ import java.time.LocalDate;
 
 @RestController
 @RestControllerAdvice
+@CrossOrigin(origins = "https://planifyevent.netlify.app")
 @RequestMapping("/app")
 public class MainController {
 

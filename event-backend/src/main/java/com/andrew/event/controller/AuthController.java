@@ -31,6 +31,8 @@ class LoginRequest {
 }
 
 @RestController
+@RestControllerAdvice
+@CrossOrigin(origins = "https://planifyevent.netlify.app")
 @RequestMapping("/app")
 public class AuthController {
 
