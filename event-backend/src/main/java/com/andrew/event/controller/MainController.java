@@ -53,9 +53,9 @@ public class MainController {
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }
 
-    @PutMapping("/users/updateUser")
-    public ResponseEntity<?> updateUser(@RequestBody User user) {
-        String message = userService.updateUser(user);
+    @PutMapping("/users/updateUser/{username}")
+    public ResponseEntity<?> updateUser(@RequestBody User user, @PathVariable String username) {
+        String message = userService.updateUser(user, username);
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }
 

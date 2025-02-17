@@ -26,8 +26,8 @@ public class UserService {
         return "User with username "+username+" removed";
     }
 
-    public String updateUser(User user) {
-        User existingUser = userRepo.findByUsername(user.getUsername());
+    public String updateUser(User user, String username) {
+        User existingUser = userRepo.findByUsername(username);
         if(existingUser != null) {
             existingUser.setUsername(user.getUsername());
             existingUser.setPassword(user.getPassword());

@@ -28,7 +28,7 @@ const ProfileUpdate = ({ user, onClose, onUpdate }) => {
   const handleSaveClick = async () => {
     try {
       const response = await axios.put(
-        `https://event-tracking-app-production.up.railway.app/app/users/updateUser`,
+        `https://event-tracking-app-production.up.railway.app/app/users/updateUser/${user.username}`,
         updatedUser,
         {
           headers: {
