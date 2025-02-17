@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./ProfileUpdate.css";
+import { useNavigate } from "react-router-dom";
 
 const ProfileUpdate = ({ user, onClose, onUpdate }) => {
   const [updatedUser, setUpdatedUser] = useState({ 
@@ -10,6 +11,7 @@ const ProfileUpdate = ({ user, onClose, onUpdate }) => {
    });
   const [message, setMessage] = useState("");
   const [isClosing, setIsClosing] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     setUpdatedUser({
@@ -38,11 +40,12 @@ const ProfileUpdate = ({ user, onClose, onUpdate }) => {
       );
 
       if (response.status === 200) {
-        setMessage("Profile updated successfully!");
+        setMessage("Profile updated successfully! Redirecting to login page...");
         setTimeout(() => {
           setMessage("");
           handleClose();
-          onUpdate(updatedUser); 
+          onUpdate(updatedUser);
+          navigate("/login");
         }, 2000);
       }
     } catch (error) {
