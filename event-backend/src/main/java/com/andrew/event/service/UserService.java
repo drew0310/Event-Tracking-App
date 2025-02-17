@@ -29,10 +29,8 @@ public class UserService {
     public String updateUser(User user, String username) {
         User existingUser = userRepo.findByUsername(username);
         if(existingUser != null) {
-            existingUser.setUsername(user.getUsername());
-            existingUser.setPassword(user.getPassword());
-            existingUser.setEmail(user.getEmail());
-            userRepo.save(existingUser);
+            userRepo.delete(existingUser);
+            userRepo.save(user);
             return "User successfully updated";
         }
         else
