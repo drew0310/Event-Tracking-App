@@ -43,8 +43,11 @@ public class UserService {
             userRepo.save(user);
             List<Event> eventList = eventRepo.findAll();
             for(Event e : eventList) {
-                if(e.getCreatedBy().equals(username))
+                if(e.getCreatedBy().equals(username)) {
+                    eventRepo.deleteByCreatedBy(username);
                     e.setCreatedBy(user.getUsername());
+                    eventRepo.save(e);
+                }
             }
             return "User successfully updated";
         }
