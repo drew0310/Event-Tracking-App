@@ -29,8 +29,6 @@ public class MainController {
     @Autowired
     private EmailService emailService;
 
-    @Autowired
-    private EventRepo eventRepo;
 
 
 
@@ -48,7 +46,6 @@ public class MainController {
     public ResponseEntity<?> deleteUser(@PathVariable String username) {
         String email = userService.getUserByUsername(username).getEmail();
         String message = userService.deleteUser(username);
-        eventRepo.deleteByCreatedBy(username);
         emailService.sendEmail(email, "Planify | Account Deletion ALERT!", "Hi "+username+"!\n\nYour Planify account has been successfully deleted from our system. As a result, you will no longer be able to access your account, and all associated event data have been removed as per our data retention policy.\n\nThank you for being a part of our platform. We appreciate your time with us, and hope to serve you again in the future. Cheers!\n\nRegards,\nPlanify");
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }

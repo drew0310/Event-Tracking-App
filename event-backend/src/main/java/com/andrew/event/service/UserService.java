@@ -1,15 +1,22 @@
 package com.andrew.event.service;
 
+import com.andrew.event.model.Event;
 import com.andrew.event.model.User;
+import com.andrew.event.repo.EventRepo;
 import com.andrew.event.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
 
     @Autowired
     private UserRepo userRepo;
+
+    @Autowired
+    private EventRepo eventRepo;
 
     public User saveUser(User user) {
         return userRepo.save(user);
@@ -21,8 +28,11 @@ public class UserService {
     }
 
     public String deleteUser(String username) {
-        if(userRepo.findByUsername(username) != null)
+        if(userRepo.findByUsername(username) != null) {
             userRepo.deleteByUsername(username);
+            eventRepo.deleteByCreatedBy(username);
+        }
+
         return "User with username "+username+" removed";
     }
 
@@ -31,6 +41,11 @@ public class UserService {
         if(existingUser != null) {
             userRepo.delete(existingUser);
             userRepo.save(user);
+            List<Event> eventList = eventRepo.findAll();
+            for(Event e : eventList) {
+                if(e.getCreatedBy().equals(username))
+                    e.setCreatedBy(user.getUsername());
+            }
             return "User successfully updated";
         }
         else
