@@ -33,3 +33,5 @@ A full-stack web application for **event and task creation and tracking**, built
 ### Deployment 🚀  
 - **Front-end** - Netlify
 - **Back-end** - Railway
+
+[Visit the web app here!](https://planifyevent.netlify.app)
